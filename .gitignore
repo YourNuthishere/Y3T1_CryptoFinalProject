@@ -1,0 +1,11 @@
+# Ignore the private key only
+private_key.pem
+
+# Common private-key name patterns (optional)
+private_*.pem
+*.key
+
+# Common junk to ignore
+.vscode/
+__pycache__/
+*.pyc
