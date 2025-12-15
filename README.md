@@ -1,5 +1,7 @@
-1. Introduction 
+1. Introduction
+   
 1.1 Overview of the Project
+
 This project implements a Digital Signature System using Python, Tkinter, and the cryptography library. The system allows users to:
 Generate RSA public/private keys
 
@@ -22,6 +24,7 @@ Use a clean and beginner-friendly GUI
 The goal is to help users understand how digital signatures ensure the authenticity and integrity of documents.
 
 1.2 Problem Statement
+
 In digital environments, files can be altered, forged, or intercepted. Without cryptographic protection:
 Anyone can modify a document
 
@@ -33,7 +36,9 @@ It becomes impossible to prove integrity
 
 
 This project solves that problem through RSA signatures.
+
 1.3 Motivation
+
 Digital signatures are used everywhere banking, mobile payments, software updates, e-government services, legal documents, and more.
  Building a functional signature system helps students understand:
 Cryptography in real systems
@@ -51,6 +56,7 @@ Signing and verifying files
 How public-key security prevents tampering
 
 1.4 Related Cryptographic Concepts
+
 The system uses several concepts:
 RSA Asymmetric Cryptography
 
@@ -71,6 +77,7 @@ Authentication, Integrity, Non-repudiation
 
 
 2. System Architecture
+
 The system consists of three major components:
 Key Generation
 
@@ -80,7 +87,9 @@ File Signing
 
 Signature Verification
 All operations are controlled through a Tkinter GUI.
+
 2.1 Overall Workflow
+
 User generates RSA key pair
 
 
@@ -120,6 +129,7 @@ Non-repudiation
 
 
 2.2 Key Generation Process
+
 Handled by generate_keys() in signer.py.
 Steps
 Create RSA private key (2048/4096 bits)
@@ -155,6 +165,7 @@ Modern padding (RSA-PSS)
 
 
 2.3 File Signing Process
+
 Triggered from the GUI using gui_sign_file().
 Steps
 Select file
@@ -186,6 +197,7 @@ Ensures file is unchanged
 
 
 2.4 Signature Verification Process
+
 Run using gui_verify_file().
 Steps
 Load file
@@ -223,6 +235,7 @@ Timestamp
 
 
 2.5 System Flowcharts & Diagrams
+
 Key Generation
 ┌─────────────────────┐
 │   Start Key Gen     │
@@ -299,7 +312,9 @@ Signature Verification
 
 
 3. Implementation Details
+   
 3.1 Technologies and Libraries Used
+
 Component
 Technology
 Language
@@ -366,6 +381,7 @@ Returns VALID / INVALID
 
 
 d. export_report()
+
 Saves:
 file name
 
@@ -384,6 +400,7 @@ SHA-256 hash
 
 
 3.4 GUI Implementation (gui.py)
+
 Major Features
 Pink GUI (your request)
 
@@ -431,14 +448,20 @@ JSON reports for traceability
 
 
 4. Usage Guide
+   
 4.1 Installation & Setup
+   
 Install cryptography:
 pip install cryptography
 Run GUI:
 python gui.py
+
 4.2 Running the Program
+   
 The GUI opens directly—no CLI needed.
+
 4.3 Generating Keys
+
 Click Generate Keys
 
 
@@ -455,6 +478,7 @@ Modulus + exponent appear on screen
 
 
 4.4 Signing Files
+
 Choose file
 
 
@@ -471,6 +495,7 @@ SHA-256 hash appears
 
 
 4.5 Verifying Signatures
+
 Choose file
 
 
@@ -494,6 +519,7 @@ Save report as JSON
 
 
 4.6 Expected Outputs
+
 Signature Example
 Signature saved to: C:/Users/Desktop/file.sig   (e.g)
 
@@ -510,7 +536,9 @@ JSON Report
   "timestamp": "2025-12-06T14:22:10"
 }
 5. Conclusion & Future Work
+
 5.1 Summary
+
 The system successfully performs:
 RSA key generation
 
@@ -531,6 +559,7 @@ JSON report creation
 
 
 5.3 Future work 
+
 Add X.509 certificate support
 
 
@@ -547,6 +576,7 @@ Add cloud key management
 
 
 6. References
+
 Python Cryptography Documentation
 
 
@@ -560,3 +590,4 @@ Tkinter Official Documentation
 
 
 Stallings, "Cryptography and Network Security"
+
