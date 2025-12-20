@@ -37,5 +37,7 @@ of digital documents.
 Install required dependency:
 ```bash
 pip install cryptography
+
 how to run : 
 python gui.py
+
